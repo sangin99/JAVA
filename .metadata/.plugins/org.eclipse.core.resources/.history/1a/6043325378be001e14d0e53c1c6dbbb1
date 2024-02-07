@@ -1,0 +1,34 @@
+package ch03;      //24.01.29 월
+
+// 제너릭 : 클래스나 메서드에서 사용할 데이터 타입을 외부에서 받아오는 기법
+class Test1 {
+	String subject;
+	int score;
+}
+
+class Test2 {
+	String subject;
+	String score;
+}
+
+class Test3 {
+	String subject;
+	Object score;      // Object 로 업캐스팅 하면 코드중복 해결가능! 전부 해결가능!
+}
+
+public class C_Generic {
+
+	public static void main(String[] args) {
+		
+		Test3 myTest = new Test3 ();
+		myTest.subject = "국어";
+		myTest.score = 95;	
+		
+		Test3 yourTest = new Test3 ();
+		yourTest.subject = "경영학원론";
+		yourTest.score = "A+";
+				
+		
+	}
+
+}

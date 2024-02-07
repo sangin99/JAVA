@@ -1,0 +1,24 @@
+package ch03;
+
+public class MaBangJin {
+
+	public static void main(String[] args) {
+		int mabang[][] = new int[5][5];
+		int row = 0;  // 가로
+		int col = 2;  // 세로
+		
+		int cnt = 1;
+		
+		mabang[row][col] = cnt++;
+		while (cnt <= 5*5) {
+			row--;
+			col++;
+		if ((row>=0 && row<5) && (col>=0 && col<5) && mabang[row][col]==0) {
+			mabang[row][col]=cnt++;
+		}
+		}System.out.println(mabang);
+		
+		
+	}
+
+}

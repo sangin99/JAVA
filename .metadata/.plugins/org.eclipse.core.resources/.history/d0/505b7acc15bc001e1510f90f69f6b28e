@@ -1,0 +1,13 @@
+package ch02_sub;
+
+public class G_InterfaceSub {
+
+	void method1 () {
+		
+		
+	}
+	
+	void method2 () {
+		
+	}
+}

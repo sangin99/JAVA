@@ -1,0 +1,13 @@
+package ch01;
+
+public class Practice_ {
+
+	public static void main(String[] args) {
+
+
+        number : {1,2,3,4,5}
+		for (int number : numbers) {
+			System.out.println(number);
+		}
+	}
+}

@@ -1,0 +1,48 @@
+package ch02;
+
+// 캡슐화 : 멤버변수(=일반적 변수(속성)와 메서드를 묶어서 변수에 대한 조작을 메서드를 통해서만 할 수 있도록 하는 것
+// 정보 은닉과 데이터 보호, ★데이터 무결성★을 보장할 수 있음
+// private - 접근제어자 : 데이터 보호 . 초기화 x 
+class FootballPlayerB{
+	private String name;
+	private String team;
+	private int goal;
+	
+	FootballPlayerB (String name, String team, int goal) {
+		this.name = name;
+		this.team = team;
+		this.goal = goal;
+	}
+	
+	String getName () {
+		return this.name;
+	}
+	String getTeam () {
+		return this.team;
+	}
+	int getGoal () {
+		return this.goal;             // get 메서드 
+	}
+	
+	// set 메서드 : 결과 x . 반환은 필요없고, 매개변수만 받아오면 됨 
+	void setName (String name) {
+		this.name = name;
+	}
+}
+
+public class E_Encapsulation {
+
+	public static void main(String[] args) {
+		
+		FootballPlayerB son = new FootballPlayerB("손흥민" , "토트넘훗스퍼" , 0);
+//		son.name = "손흥민";
+//		son.team = "토트넘 훗스퍼";
+//		son.goal =0;              -- 접근제어자를 사용함으로 필요없어짐
+//		...[]
+		
+//		System.out.println(son.name);  - 100% 데이터 추출 확실/"손흥민" , "토트넘훗스퍼" , 0
+		System.out.println(son.getName());  //-- 초기값에서 변경되지 않았음을 100% 보장
+
+	}
+
+}

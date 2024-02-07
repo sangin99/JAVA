@@ -1,0 +1,57 @@
+package ch03;      //24.01.29 월
+
+// 제너릭 : 클래스나 메서드에서 사용할 데이터 타입을 외부에서 받아오는 기법 
+// 받고자 하는 데이터 타입(나중에) <매개타입.T> 
+
+// Test1 . Test2 형태로 클래스를 사용하게 되면 코드의 중복이 발생함
+class Test1 {
+	String subject;
+	int score;
+}
+
+class Test2 {
+	String subject;
+	String score;
+}
+
+// Test3 형태로 클래스를 사용하게되면 타입의 안전성이 떨어짐
+class Test3 {
+	String subject;
+	Object score;      // Object 로 업캐스팅 하면 코드중복 해결가능! 전부 해결가능! but, 코드의(타입에 대한) 안정성 ↓
+}
+
+// 위의 두 가지 문제점을 해결하기 위한 방안 : 제너릭
+class Test4<T> {
+	String subject;
+	T score;
+}
+
+public class C_Generic {
+
+	public static void main(String[] args) {
+		
+		Test3 myTest = new Test3 ();
+		myTest.subject = "국어";
+		myTest.score = 95;	
+		
+		Test3 yourTest = new Test3 ();
+		yourTest.subject = "경영학원론";
+		yourTest.score = "A+";
+		
+		
+		Test4<Integer> hisTest = new Test4<>();      // score 타입이 결정난다.
+		hisTest.score = 95;
+//		hisTest.score = "A+";
+		
+		Test4<String> herTest = new Test4<>();
+		herTest.score = "A+";
+		
+		hisTest.score++;
+//		herTest.score++;
+		
+	
+				
+		
+	}
+
+}

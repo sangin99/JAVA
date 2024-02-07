@@ -1,0 +1,13 @@
+package ch02_sub;
+
+public class G_IterfaceSub {
+
+	void method1 () {
+		
+		
+	}
+	
+	void method2 () {
+		
+	}
+}
